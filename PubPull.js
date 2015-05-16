@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-	$.getJSON('http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=1000&term= ((Merritt%20Maduke%5BAuthor%5D)%20AND%20("2003"%5BDate%20-%20Create%5D%20%3A%20"3000"%5BDate%20-%20Create%5D))%20AND%20Stanford%5BAffiliation%5D', function(data){
+    $.getJSON('http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=1000&term= ((Merritt%20Maduke%5BAuthor%5D)%20AND%20("2003"%5BDate%20-%20Create%5D%20%3A%20"3000"%5BDate%20-%20Create%5D))%20AND%20Stanford%5BAffiliation%5D', function(data){
     var ids = data.esearchresult.idlist;
     var publications = [];
     iterateJSON(ids,publications);
